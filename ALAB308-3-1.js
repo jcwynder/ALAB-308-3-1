@@ -47,6 +47,7 @@ for (n = 2; n <= 100; n++) {
 
 // Part 3: Feeling Loopy
 
+// Variable declaration for array of objects
 const itemsArray = [
   { ID: 42, Name: "Bruce", Occupation: "Knight", Age: "41" },
   { ID: 57, Name: "Bob", Occupation: "Fry Cook", Age: "19" },
@@ -54,12 +55,17 @@ const itemsArray = [
   { ID: 98, Name: "Bill", Occupation: "Doctor's Assistant", Age: "26" },
 ];
 
+// Variable declaration for CVS to define the format and to extract given data values into their own section
 const csvString = [
   ["ID", "Name", "Occupation", "Age"],
   ...itemsArray.map((item) => [item.ID, item.Name, item.Occupation, item.Age]),
 ]
 
+  // .map method is used to integrate the the four defined arrays into a singualar array
+  // .join method is used along .map to format the values into a string
+  // Final .join is used to add a line break after each array entry in curly brackets with a comma
   .map((e) => e.join(","))
   .join("\n");
 
+// Outputs the CSV with given conditions
 console.log(csvString);
