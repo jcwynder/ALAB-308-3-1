@@ -22,3 +22,22 @@ for (let i = 1; i <= 100; i++) {
     console.log(i);
   }
 }
+
+// Declare an arbitrary number, n
+
+for (n = 2; n <= 100; n++) {
+  let prime = true;
+
+  // Create a loop that searches for the next prime number, starting at n and incrementing from there
+
+  for (j = 2; j < n; j++) {
+    if (n % j === 0) {
+      prime = false;
+    }
+  }
+
+  // As soon as you find the prime number, log that number and exit the loop
+  if (prime) {
+    console.log(n);
+  }
+}
