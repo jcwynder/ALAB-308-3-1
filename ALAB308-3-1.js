@@ -55,7 +55,8 @@ const itemsArray = [
   { ID: 98, Name: "Bill", Occupation: "Doctor's Assistant", Age: "26" },
 ];
 
-// Variable declaration for CVS to define the format and to extract given data values into their own section
+// Variable declaration for CVS to define the format
+// And to extract given data values into their own section from the itemsArray variable
 const csvString = [
   ["ID", "Name", "Occupation", "Age"],
   ...itemsArray.map((item) => [item.ID, item.Name, item.Occupation, item.Age]),
