@@ -1,3 +1,5 @@
+// Part 1: Fizz Buzz
+
 // Loop through all numbers from 1 to 100
 
 for (let i = 1; i <= 100; i++) {
@@ -5,6 +7,7 @@ for (let i = 1; i <= 100; i++) {
   if (i % 3 === 0 && i % 5 === 0) {
     console.log(i + " Fizz Buzz");
   }
+
   // Check if the number is divisible by 3
   else if (i % 3 === 0) {
     console.log(i + " Fizz");
@@ -20,6 +23,8 @@ for (let i = 1; i <= 100; i++) {
     console.log(i);
   }
 }
+
+// Part 2: Prime Time
 
 // Declare an arbitrary number, n
 
@@ -39,3 +44,22 @@ for (n = 2; n <= 100; n++) {
     console.log(n);
   }
 }
+
+// Part 3: Feeling Loopy
+
+const itemsArray = [
+  { ID: 42, Name: "Bruce", Occupation: "Knight", Age: "41" },
+  { ID: 57, Name: "Bob", Occupation: "Fry Cook", Age: "19" },
+  { ID: 63, Name: "Blaine", Occupation: "Quiz Master", Age: "58" },
+  { ID: 98, Name: "Bill", Occupation: "Doctor's Assistant", Age: "26" },
+];
+
+const csvString = [
+  ["ID", "Name", "Occupation", "Age"],
+  ...itemsArray.map((item) => [item.ID, item.Name, item.Occupation, item.Age]),
+]
+
+  .map((e) => e.join(","))
+  .join("\n");
+
+console.log(csvString);
